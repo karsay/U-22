@@ -51,7 +51,7 @@ class HomeFragment : Fragment() {
     private fun getWeather(city: String):Job = GlobalScope.launch {
 
         // APIを使う際に必要なKEY
-        val API_KEY = "6e8e86e4e208ed9480deb401bd28ba65"
+        val API_KEY = getString(R.string.weather_api_key)
         // URL。場所と言語・API_KEYを添付
         val API_URL = "https://api.openweathermap.org/data/2.5/forecast?" +
                 "q=" + city + ",jp&" +
