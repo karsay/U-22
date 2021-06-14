@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
-import androidx.fragment.app.setFragmentResult
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
@@ -86,11 +84,6 @@ class HomeFragment : Fragment() {
 
         resultText = descriptionText
 
-        // 値の受け渡しテスト
-        setFragmentResult("weather_info", bundleOf(
-            "result_weather" to weather,
-            "result_clothes_index" to 21
-        ))
     }
 
 }
