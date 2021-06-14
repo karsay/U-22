@@ -47,6 +47,11 @@ class HomeFragment : Fragment() {
         return sdf.format(nowTime)
     }
 
+    // ケルビンから摂氏に変換
+//    private fun kelvin2Celsius(kelvin: Float): Float{
+////        val
+//    }
+
     // 天候データの取得
     private fun getWeather(city: String):Job = GlobalScope.launch {
 
@@ -77,10 +82,10 @@ class HomeFragment : Fragment() {
         val weather = Object.getJSONArray("weather").getJSONObject(0).getString("description")
         // 気温
         val temperature = Object.getJSONObject("main").getString("temp")
-        // 降水量
-        val rainfall = "0"
+        // 湿度
+        val humidity = Object.getJSONObject("main").getString("humidity")
 
-        val descriptionText = "日時:" + unixTimeChange(date) + "\n天候:" + weather + "\n気温:" + temperature + "\n降水率" + rainfall
+        val descriptionText = "日時:" + unixTimeChange(date) + "\n天候:" + weather + "\n気温:" + temperature + "\n湿度" + humidity
 
         resultText = descriptionText
 
