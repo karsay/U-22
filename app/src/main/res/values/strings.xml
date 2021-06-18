@@ -6,4 +6,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_favorite">お気に入り</string>
     <string name="weather_api_key">6e8e86e4e208ed9480deb401bd28ba65</string>
+    <string name="male">男性</string>
+    <string name="female">女性</string>
+    <string name="gender_selected">性別を選んでください</string>
+    <string name="area" />
+    <string name="area_selected">地域を選択してください</string>
 </resources>
