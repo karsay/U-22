@@ -28,14 +28,14 @@ class CoordinateFragment : Fragment() {
 
 
         // 設定した requestKey を元にbundleを受け取る.服装指数と天候情報の受け取り.
-        setFragmentResultListener("weather_info") { requestKey, bundle ->
-            val weather = bundle.getString("result_weather")             // 天候
-            val clothesIndex = bundle.getInt("result_clothes_index")   // 服装指数
-
-            // 値の受け渡し確認のテスト
-            weatherInfoText.text = weather
-            clothesIndexText.text = clothesIndex.toString()
-        }
+//        setFragmentResultListener("weather_info") { requestKey, bundle ->
+//            val weather = bundle.getString("result_weather")             // 天候
+//            val clothesIndex = bundle.getInt("result_clothes_index")   // 服装指数
+//
+//            // 値の受け渡し確認のテスト
+//            weatherInfoText.text = weather
+//            clothesIndexText.text = clothesIndex.toString()
+//        }
 
     }
 
