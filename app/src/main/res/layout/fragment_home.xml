@@ -7,9 +7,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
@@ -19,33 +21,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/cor1" />
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="210dp"
             android:text="本日のおすすめの服装"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="italic"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="210dp"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:text="服装指数"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="10dp"
-            />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/textView3"
@@ -56,30 +57,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
         <TableLayout
             android:id="@+id/table_cuerpo"
             android:layout_width="375dp"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:background="@drawable/shape_style1"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3">
 
             <TableRow
                 android:id="@+id/tableRow1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/shape_style"
                     android:padding="5dp"
                     android:text="時刻"
-                    android:background="@drawable/shape_style"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/weatherText"
@@ -87,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/weatherText"
@@ -95,59 +96,64 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
             </TableRow>
 
             <TableRow
                 android:id="@+id/tableRow2"
                 android:layout_width="match_parent"
-                android:background="@drawable/shape_style1"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_style1">
 
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/shape_style"
                     android:padding="5dp"
                     android:text="温度"
-                    android:background="@drawable/shape_style"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/weatherText"
@@ -155,7 +161,7 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/weatherText"
@@ -163,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/weatherText"
@@ -171,35 +177,39 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
             </TableRow>
 
@@ -212,10 +222,10 @@
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/shape_style"
                     android:padding="5dp"
                     android:text="天気"
-                    android:background="@drawable/shape_style"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/weatherText"
@@ -223,7 +233,7 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/weatherText"
@@ -231,59 +241,64 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
             </TableRow>
 
             <TableRow
                 android:id="@+id/tableRow4"
                 android:layout_width="match_parent"
-                android:background="@drawable/shape_style1"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_style1">
 
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/shape_style"
                     android:padding="5dp"
                     android:text="湿度"
-                    android:background="@drawable/shape_style"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/weatherText"
@@ -291,7 +306,7 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/weatherText"
@@ -299,176 +314,271 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <TextView
                     android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
 
             </TableRow>
         </TableLayout>
+
+
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="430dp"
+            android:background="@drawable/shape_style2"
             android:text="↓"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="430dp"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="0dp"
             android:layout_height="250dp"
+            android:layout_marginTop="500dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/cor2"
-            android:layout_marginTop="500dp"
-            />
+            app:srcCompat="@drawable/cor2" />
 
         <TextView
             android:id="@+id/weatherText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:padding="5dp"
             android:text="便利なアイテム"
             android:textSize="25sp"
-            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView1"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/imageView1" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="200dp"
             android:layout_height="150dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="30dp"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="830dp"
-            app:srcCompat="@drawable/cor2"
-            />
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cor2" />
 
         <TextView
             android:id="@+id/weatherText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="a"
-            android:textSize="25sp"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="870dp"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="50dp"
-            />
+            android:padding="5dp"
+            android:text="a"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="200dp"
             android:layout_height="150dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="30dp"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="1020dp"
-            app:srcCompat="@drawable/cor2"
-            />
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cor2" />
+
         <TextView
             android:id="@+id/weatherText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="a"
-            android:textSize="25sp"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="1060dp"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="50dp"
-            />
+            android:padding="5dp"
+            android:text="a"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="200dp"
             android:layout_height="150dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="30dp"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="1210dp"
-            app:srcCompat="@drawable/cor2"
-            />
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cor2" />
+
         <TextView
             android:id="@+id/weatherText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="1250dp"
+            android:layout_marginRight="50dp"
             android:padding="5dp"
             android:text="a"
             android:textSize="25sp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="1250dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="50dp"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="200dp"
             android:layout_height="150dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="1400dp"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="30dp"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="1400dp"
-            app:srcCompat="@drawable/cor2"
-            />
+            app:srcCompat="@drawable/cor2" />
+
         <TextView
             android:id="@+id/weatherText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="1440dp"
+            android:layout_marginRight="50dp"
             android:padding="5dp"
             android:text="a"
             android:textSize="25sp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="1440dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="50dp"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        フッター-->
+
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#696969"
+                android:layout_marginTop="1620dp"
+                android:paddingBottom="170dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="製品情報"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="ニュースリリース"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="会社情報"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="問い合わせ"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="1700dp"
+             android:layout_marginLeft="30dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+            >
+
+             <ImageView
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 app:srcCompat="@drawable/instagram" />
+
+
+             <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                 android:layout_marginLeft="20dp"
+                 app:srcCompat="@drawable/twitter" />
+
+             <ImageView
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:layout_marginLeft="20dp"
+                 app:srcCompat="@drawable/facebook" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1750dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="#ffffff"
+            android:text="© WeatherStyle"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+<!--        </FrameLayout>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 <!--         <TextView
@@ -484,4 +594,5 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" /> -->
+
 </ScrollView>
