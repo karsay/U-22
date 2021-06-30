@@ -11,27 +11,49 @@ import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.*
 
-class Weather constructor(_city: String, _cnt: Int, _apiKey: String){
+class Weather constructor(_city: String, _apiKey: String){
+
+    /*
+
+        気象情報を取得するクラス
+        ・getWeatherメソッド
+            - ３時間毎の気象情報を二次元配列で返す
+              [x][y]左が時間帯、右が項目
+              0 = 日時
+              1 = 温度
+              2 = 天候id
+              3 = 湿度
+              4 = 降水量
+              （例）
+              [0][1]直近の温度を取得
+              [1][3]3時間後の湿度を取得
+        .
+        ・getClothingIndexメソッド
+            - 服装指数を文字列形式で返す
+            計算式未実装
+
+     */
+
     val city:String
-    val cnt:Int
     val apiKey:String
+    val clothingIndexStr:String = "80"
+    val weatherDatas = Array(8, {arrayOfNulls<String>(5)})
+
     init {
         city = _city
-        cnt = _cnt
         apiKey = _apiKey
+        initWeather()
     }
-
-    var weatherDatas: Array<String?> = arrayOfNulls(cnt)
 
     // unixtimeからフォーマットの日付に変換
     private fun unixTimeChange(unixTime: String): String {
-        val sdf = SimpleDateFormat("yyyy/MM/dd HH:mm")
+        val sdf = SimpleDateFormat("HH:mm")
         val nowTime = Date(unixTime.toInt() * 1000L)
         return sdf.format(nowTime)
     }
 
     // 天候データの取得
-    private fun setWeather(): Job = GlobalScope.launch {
+    private fun initWeather(): Job = GlobalScope.launch {
 
         // APIを使う際に必要なKEY
         val API_KEY = apiKey
@@ -40,7 +62,7 @@ class Weather constructor(_city: String, _cnt: Int, _apiKey: String){
                 "q=" + city + ",jp&" +
                 "lang=" + "ja" + "&" +
                 "units=" + "metric" + "&" +
-                "cnt=" + cnt.toString() + "&" +
+                "cnt=" + "8" + "&" +
                 "appid=" + API_KEY
         val url = URL(API_URL)
 
@@ -53,13 +75,13 @@ class Weather constructor(_city: String, _cnt: Int, _apiKey: String){
         // 配列を取得
         val list = json.getJSONArray("list")
 
-        for (i in 1..cnt) {
+        for (i in 0..7) {
             //時間帯？
-            val Object = list.getJSONObject(i - 1)
+            val Object = list.getJSONObject(i)
             // 日時
             val date = Object.getString("dt")
             // 天候
-            val weather = Object.getJSONArray("weather").getJSONObject(0).getString("description")
+            val weather = Object.getJSONArray("weather").getJSONObject(0).getString("icon")
             // 気温
             val temperature = Object.getJSONObject("main").getString("temp")
             // 湿度
@@ -71,14 +93,27 @@ class Weather constructor(_city: String, _cnt: Int, _apiKey: String){
             } catch (e: Exception) {
             }
 
-            weatherDatas[i - 1] = "日時:" + unixTimeChange(date) + "\n天候:" + weather + "\n気温:" + temperature + "°" + "\n湿度:" + humidity + "%" +
-                        "\n降水量:" + precipitation + "mm" + "\n-----------------------------\n"
+            weatherDatas[i][0] = unixTimeChange(date)
+            weatherDatas[i][1] = temperature
+            weatherDatas[i][2] = weather
+            weatherDatas[i][3] = humidity
+            weatherDatas[i][4] = precipitation
+
         }
+
+        // ここに服装指数の計算式を入れる
+        //clothingIndexStr =
     }
 
-    fun getWeather():Array<String?>{
-        setWeather()
+    // 天候情報を返す関数
+    fun getWeather():Array<Array<String?>>{
         Thread.sleep(500)
         return weatherDatas
     }
+
+    // 服装指数を返す関数
+    fun getClothingIndex(): String {
+        return clothingIndexStr
+    }
+
 }
