@@ -24,6 +24,7 @@ class Weather constructor(_city: String, _apiKey: String){
               2 = 天候id
               3 = 湿度
               4 = 降水量
+              5 = 体感温度
               （例）
               [0][1]直近の温度を取得
               [1][3]3時間後の湿度を取得
@@ -37,7 +38,7 @@ class Weather constructor(_city: String, _apiKey: String){
     val city:String
     val apiKey:String
     val clothingIndexStr:String = "80"
-    val weatherDatas = Array(8, {arrayOfNulls<String>(5)})
+    val weatherDatas = Array(8, {arrayOfNulls<String>(6)})
 
     init {
         city = _city
@@ -88,6 +89,8 @@ class Weather constructor(_city: String, _apiKey: String){
             val humidity = Object.getJSONObject("main").getString("humidity")
             // 降水量
             var precipitation = "0"
+            // 体感温度
+            val feelTemp = Object.getJSONObject("main").getString("feels_like")
             try {
                 precipitation = Object.getJSONObject("rain").getString("3h")
             } catch (e: Exception) {
@@ -98,6 +101,7 @@ class Weather constructor(_city: String, _apiKey: String){
             weatherDatas[i][2] = weather
             weatherDatas[i][3] = humidity
             weatherDatas[i][4] = precipitation
+            weatherDatas[i][5] = feelTemp
 
         }
 
