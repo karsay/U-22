@@ -58,7 +58,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <TableLayout
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            >
+
+            <TableLayout
             android:id="@+id/table_cuerpo"
             android:layout_width="375dp"
             android:layout_height="match_parent"
@@ -67,6 +76,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3">
+
 
             <TableRow
                 android:id="@+id/tableRow1"
@@ -356,9 +366,10 @@
                     android:text="TextView"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
-
             </TableRow>
         </TableLayout>
+
+        </HorizontalScrollView>
 
 
         <Button
@@ -366,7 +377,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="430dp"
-            android:background="@drawable/shape_style2"
+            android:background="@drawable/shape_style3"
             android:text="↓"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
