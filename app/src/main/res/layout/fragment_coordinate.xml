@@ -41,7 +41,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/feelTemp1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="76dp"
@@ -63,7 +63,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/clothingIndex1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="180dp"
@@ -120,7 +120,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/feelTemp2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="76dp"
@@ -142,7 +142,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/clothingIndex2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="180dp"
@@ -201,7 +201,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/lastimageView" />
 
             <TextView
-                android:id="@+id/lasttextView2"
+                android:id="@+id/feelTemp3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="76dp"
@@ -223,7 +223,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/lastimageView" />
 
             <TextView
-                android:id="@+id/lastimageView4"
+                android:id="@+id/clothingIndex3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="180dp"
