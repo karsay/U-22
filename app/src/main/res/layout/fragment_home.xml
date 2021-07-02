@@ -58,320 +58,319 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            >
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
             <TableLayout
-            android:id="@+id/table_cuerpo"
-            android:layout_width="375dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/shape_style1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3">
+                android:id="@+id/table_cuerpo"
+                android:layout_width="375dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_style1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
 
 
-            <TableRow
-                android:id="@+id/tableRow1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_style"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="時刻"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDay1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDay2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDay3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDay4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDay5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDay6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDay7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/shape_style"
-                    android:padding="5dp"
-                    android:text="時刻"
-                    android:background="@drawable/shape_style"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
+                    android:background="@drawable/shape_style1">
 
-                <TextView
-                    android:id="@+id/tableDay1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_style"
+                        android:padding="5dp"
+                        android:text="温度"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:id="@+id/tableDay2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableDay3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableDay4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableDay5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableDay6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableDay7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/tableTemp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-            </TableRow>
+                    <TextView
+                        android:id="@+id/tableTemp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-            <TableRow
-                android:id="@+id/tableRow2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_style1">
+                    <TextView
+                        android:id="@+id/tableTemp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/tableTemp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableTemp5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableTemp6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableTemp7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35sp"
+                        android:background="@drawable/shape_style"
+                        android:padding="5dp"
+                        android:text="天気"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ImageView
+                        android:id="@+id/tableWeather1"
+                        android:layout_width="50sp"
+                        android:layout_height="35sp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/tableWeather2"
+                        android:layout_width="50sp"
+                        android:layout_height="35sp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/tableWeather3"
+                        android:layout_width="50sp"
+                        android:layout_height="35sp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/tableWeather4"
+                        android:layout_width="50sp"
+                        android:layout_height="35sp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/tableWeather5"
+                        android:layout_width="50sp"
+                        android:layout_height="35sp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/tableWeather6"
+                        android:layout_width="50sp"
+                        android:layout_height="35sp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/tableWeather7"
+                        android:layout_width="50sp"
+                        android:layout_height="35sp"
+                        android:padding="5dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/shape_style"
-                    android:padding="5dp"
-                    android:text="温度"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:background="@drawable/shape_style1">
 
-                <TextView
-                    android:id="@+id/tableTemp1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_style"
+                        android:padding="5dp"
+                        android:text="湿度"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:id="@+id/tableTemp2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/tableHum1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:id="@+id/tableTemp3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableTemp4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableTemp5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableTemp6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableTemp7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/tableHum2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-            </TableRow>
+                    <TextView
+                        android:id="@+id/tableHum3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-            <TableRow
-                android:id="@+id/tableRow3"
-                android:layout_width="match_parent"
-                android:layout_height="30sp">
+                    <TextView
+                        android:id="@+id/tableHum4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="35sp"
-                    android:background="@drawable/shape_style"
-                    android:padding="5dp"
-                    android:text="天気"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-              
-                <ImageView
-                    android:id="@+id/tableWeather1"
-                    android:layout_width="50sp"
-                    android:layout_height="35sp"
-                    android:scaleType="centerCrop" />
+                    <TextView
+                        android:id="@+id/tableHum5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <ImageView
-                    android:id="@+id/tableWeather2"
-                    android:layout_width="50sp"
-                    android:layout_height="35sp"
-                    android:scaleType="centerCrop" />
+                    <TextView
+                        android:id="@+id/tableHum6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <ImageView
-                    android:id="@+id/tableWeather3"
-                    android:layout_width="50sp"
-                    android:layout_height="35sp"
-                    android:scaleType="centerCrop" />
+                    <TextView
+                        android:id="@+id/tableHum7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <ImageView
-                    android:id="@+id/tableWeather4"
-                    android:layout_width="50sp"
-                    android:layout_height="35sp"
-                    android:scaleType="centerCrop" />
-
-                <ImageView
-                    android:id="@+id/tableWeather5"
-                    android:layout_width="50sp"
-                    android:layout_height="35sp"
-                    android:scaleType="centerCrop" />
-
-                <ImageView
-                    android:id="@+id/tableWeather6"
-                    android:layout_width="50sp"
-                    android:layout_height="35sp"
-                    android:scaleType="centerCrop" />
-
-                <ImageView
-                    android:id="@+id/tableWeather7"
-                    android:layout_width="50sp"
-                    android:layout_height="35sp"
-                    android:padding="5dp" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tableRow4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_style1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/shape_style"
-                    android:padding="5dp"
-                    android:text="湿度"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/tableHum1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-
-                <TextView
-                    android:id="@+id/tableHum2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableHum3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableHum4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableHum5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableHum6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-              
-                <TextView
-                    android:id="@+id/tableHum7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:gravity="center"/>
-
-            </TableRow>
-        </TableLayout>
+                </TableRow>
+            </TableLayout>
 
         </HorizontalScrollView>
 
@@ -379,19 +378,18 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:background="@drawable/shape_style3"
-            android:layout_marginTop="30dp"
             android:text="↓"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/table_cuerpo" />
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="0dp"
             android:layout_height="250dp"
-            android:layout_marginTop="500dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -504,7 +502,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <!--        フッター-->
-
+<!--
             <LinearLayout
                 android:id="@+id/footer"
                 android:layout_width="match_parent"
@@ -593,10 +591,10 @@
             android:textSize="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
-
+-->
 <!--        </FrameLayout>-->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 <!--         <TextView
             android:id="@+id/weatherText"
             android:layout_width="400sp"
