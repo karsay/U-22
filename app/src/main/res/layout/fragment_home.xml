@@ -32,7 +32,6 @@
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
-            android:textStyle="italic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="名古屋の天気"
+            android:text="本日の名古屋の天気"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -84,69 +83,77 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_style"
                     android:padding="5dp"
                     android:text="時刻"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:background="@drawable/shape_style"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
 
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableDay1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
 
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableDay2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableDay3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableDay4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableDay5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableDay6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableDay7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
 
             </TableRow>
 
@@ -157,7 +164,6 @@
                 android:background="@drawable/shape_style1">
 
                 <TextView
-                    android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_style"
@@ -166,132 +172,124 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableTemp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
 
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableTemp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
 
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableTemp3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableTemp4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableTemp5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableTemp6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableTemp7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
 
             </TableRow>
 
             <TableRow
                 android:id="@+id/tableRow3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="30sp">
 
                 <TextView
-                    android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35sp"
                     android:background="@drawable/shape_style"
                     android:padding="5dp"
                     android:text="天気"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+              
+                <ImageView
+                    android:id="@+id/tableWeather1"
+                    android:layout_width="50sp"
+                    android:layout_height="35sp"
+                    android:scaleType="centerCrop" />
 
-                <TextView
-                    android:id="@+id/weatherText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <ImageView
+                    android:id="@+id/tableWeather2"
+                    android:layout_width="50sp"
+                    android:layout_height="35sp"
+                    android:scaleType="centerCrop" />
 
-                <TextView
-                    android:id="@+id/weatherText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <ImageView
+                    android:id="@+id/tableWeather3"
+                    android:layout_width="50sp"
+                    android:layout_height="35sp"
+                    android:scaleType="centerCrop" />
 
-                <TextView
-                    android:id="@+id/weatherText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <ImageView
+                    android:id="@+id/tableWeather4"
+                    android:layout_width="50sp"
+                    android:layout_height="35sp"
+                    android:scaleType="centerCrop" />
 
-                <TextView
-                    android:id="@+id/weatherText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <ImageView
+                    android:id="@+id/tableWeather5"
+                    android:layout_width="50sp"
+                    android:layout_height="35sp"
+                    android:scaleType="centerCrop" />
 
-                <TextView
-                    android:id="@+id/weatherText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <ImageView
+                    android:id="@+id/tableWeather6"
+                    android:layout_width="50sp"
+                    android:layout_height="35sp"
+                    android:scaleType="centerCrop" />
 
-                <TextView
-                    android:id="@+id/weatherText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/weatherText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <ImageView
+                    android:id="@+id/tableWeather7"
+                    android:layout_width="50sp"
+                    android:layout_height="35sp"
+                    android:padding="5dp" />
 
             </TableRow>
 
@@ -302,7 +300,6 @@
                 android:background="@drawable/shape_style1">
 
                 <TextView
-                    android:id="@+id/weatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_style"
@@ -311,77 +308,84 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableHum1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
 
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableHum2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableHum3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableHum4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableHum5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableHum6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
+              
                 <TextView
-                    android:id="@+id/weatherText"
+                    android:id="@+id/tableHum7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="TextView"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"/>
 
             </TableRow>
         </TableLayout>
 
         </HorizontalScrollView>
 
-
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="430dp"
             android:background="@drawable/shape_style3"
+            android:layout_marginTop="30dp"
             android:text="↓"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/table_cuerpo" />
 
         <ImageView
             android:id="@+id/imageView1"
@@ -390,8 +394,9 @@
             android:layout_marginTop="500dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2"
             app:srcCompat="@drawable/cor2" />
 
         <TextView
