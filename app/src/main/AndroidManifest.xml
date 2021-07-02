@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SunnyActivity"
+            android:label="@string/sub_name">
+        </activity>
     </application>
 
 </manifest>
