@@ -111,7 +111,7 @@ class Weather constructor(_city: String, _apiKey: String){
 
     // 天候情報を返す関数
     fun getWeather():Array<Array<String?>>{
-        Thread.sleep(500)
+        Thread.sleep(100)
         return weatherDatas
     }
 
