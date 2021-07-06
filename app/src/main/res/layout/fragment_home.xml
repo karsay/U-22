@@ -32,6 +32,51 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+        <LinearLayout
+            android:id="@+id/weathertitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/horizontalScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_style"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="時刻"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_style"
+                android:padding="5dp"
+                android:text="温度"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35sp"
+                android:background="@drawable/shape_style"
+                android:padding="5dp"
+                android:text="天気"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_style"
+                android:padding="5dp"
+                android:text="湿度"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
             android:layout_width="wrap_content"
@@ -57,14 +102,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/shape_style"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="時刻"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
                     <TextView
                         android:id="@+id/tableDay1"
@@ -138,14 +175,6 @@
                     android:background="@drawable/shape_style1">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/shape_style"
-                        android:padding="5dp"
-                        android:text="温度"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
                         android:id="@+id/tableTemp1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -215,14 +244,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="30sp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="35sp"
-                        android:background="@drawable/shape_style"
-                        android:padding="5dp"
-                        android:text="天気"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
                     <ImageView
                         android:id="@+id/tableWeather1"
                         android:layout_width="50sp"
@@ -272,14 +293,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_style1">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/shape_style"
-                        android:padding="5dp"
-                        android:text="湿度"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
                     <TextView
                         android:id="@+id/tableHum1"
@@ -345,6 +358,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 </TableRow>
+
             </TableLayout>
 
         </HorizontalScrollView>
