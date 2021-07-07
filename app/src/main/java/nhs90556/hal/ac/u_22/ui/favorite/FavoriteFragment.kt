@@ -50,11 +50,7 @@ class FavoriteFragment : Fragment() {
             intent.putExtra("Category", 3.toString())
             startActivity(intent)
         }
-        imageButton4.setOnClickListener {
-            val intent = Intent(context, SunnyActivity::class.java)
-            intent.putExtra("Category", 4.toString())
-            startActivity(intent)
-        }
+
     }
 
 

@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/image_button_bg"
-        app:srcCompat="@drawable/fav_sun" />
+        app:srcCompat="@drawable/fav_sunny" />
 
     <ImageButton
         android:id="@+id/imageButton1"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton0"
         android:background="@drawable/image_button_bg"
-        app:srcCompat="@drawable/fav_rainny" />
+        app:srcCompat="@drawable/fav_rain" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton1"
         android:background="@drawable/image_button_bg"
-        app:srcCompat="@drawable/fav_cloudy" />
+        app:srcCompat="@drawable/fav_cloud" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
         android:background="@drawable/image_button_bg"
-        app:srcCompat="@drawable/fav_snow" />
+        app:srcCompat="@drawable/fav_snowy" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
