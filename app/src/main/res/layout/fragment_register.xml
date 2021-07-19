@@ -14,16 +14,15 @@
         android:text="@string/title_register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.091" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:entries="@array/txt_area_arr"
         android:gravity="center|center_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,19 +30,19 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602" />
+        app:layout_constraintVertical_bias="0.844" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginLeft="135dp"
         android:text="@string/gender_selected"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
@@ -52,18 +51,24 @@
         android:text="@string/area_selected"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.724" />
 
     <RadioGroup
         android:id="@+id/gendergroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        android:layout_marginStart="176dp"
+        android:layout_marginLeft="176dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginRight="175dp"
+        android:layout_marginBottom="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/area_sozai"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/gender_sozai">
 
         <RadioButton
             android:id="@+id/radioButton"
@@ -77,5 +82,39 @@
             android:layout_height="wrap_content"
             android:text="@string/female" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/area_sozai"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginRight="156dp"
+        android:layout_marginBottom="58dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/area_sozai"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gendergroup"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/gender_sozai"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/gender_sozai"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRegister"
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
