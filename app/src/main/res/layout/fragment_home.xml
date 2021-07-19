@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@+id/horizontalScrollView"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             >
 
@@ -78,10 +78,10 @@
 
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="45dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView">
 
@@ -164,6 +164,7 @@
                         android:padding="5dp"
                         android:text="TextView"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
+
 
                 </TableRow>
 
@@ -383,142 +384,272 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2"
-            app:srcCompat="@drawable/map_japan"
-            />
+            app:srcCompat="@drawable/map_japan" />
+
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageButton0"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="50dp"
+            android:background="?attr/selectableItemBackground"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2"
-            app:srcCompat="@drawable/okinawa_map_japan"
-            android:layout_marginLeft="75dp"
-            android:layout_marginTop="50dp"
-            />
+            app:srcCompat="@drawable/okinawa_map_japan" />
+
+
 
         <ImageButton
+            android:id="@+id/imageButton1"
             android:layout_width="45dp"
             android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
-            app:layout_constraintTop_toBottomOf="@id/button2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="220dp"
             android:layout_marginTop="30dp"
-            />
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w01n" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageButton1"
+            android:layout_marginRight="80dp"
+            android:text="札幌"/>
+
+
         <ImageButton
+            android:id="@id/imageButton2"
             android:layout_width="45dp"
             android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="100dp"
-            />
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w02d" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageButton2"
+            android:layout_marginRight="135dp"
+            android:text="新潟"/>
+
         <ImageButton
+            android:id="@id/imageButton3"
             android:layout_width="45dp"
             android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
-            app:layout_constraintTop_toBottomOf="@id/button2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="160dp"
             android:layout_marginRight="10dp"
-            />
-        <ImageButton
-            android:layout_width="45dp"
-            android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w03d" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageButton3"
+            android:layout_marginRight="10dp"
+            android:text="金沢"/>
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="45dp"
+            android:layout_height="65dp"
             android:layout_marginTop="190dp"
             android:layout_marginRight="140dp"
-
-            />
-        <ImageButton
-            android:layout_width="45dp"
-            android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="210dp"
-            android:layout_marginLeft="50dp"
-            />
-        <ImageButton
-            android:layout_width="45dp"
-            android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
             app:layout_constraintTop_toBottomOf="@id/button2"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="300dp"
-            android:layout_marginLeft="45dp"
-            />
-        <ImageButton
-            android:layout_width="45dp"
-            android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
-            app:layout_constraintTop_toBottomOf="@id/button2"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="280dp"
-            android:layout_marginLeft="105dp"
-            />
-        <ImageButton
-            android:layout_width="45dp"
-            android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w10d" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageButton4"
+            android:layout_marginRight="140dp"
+            android:text="広島"/>
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="45dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="210dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w11d" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageButton5"
+            android:layout_marginLeft="50dp"
+            android:text="福岡"/>
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="45dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="300dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w02d" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageButton6"
+            android:layout_marginLeft="45dp"
+            android:text="鹿児島"/>
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="45dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="280dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w01d" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageButton7"
+            android:layout_marginLeft="115dp"
+            android:text="高知"/>
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="45dp"
+            android:layout_height="65dp"
             android:layout_marginTop="270dp"
             android:layout_marginRight="25dp"
-            />
-        <ImageButton
-            android:layout_width="45dp"
-            android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w11n" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="250dp"
+            app:layout_constraintTop_toTopOf="@id/imageButton8"
+            android:layout_marginRight="25dp"
+            android:text="大阪"/>
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="45dp"
+            android:layout_height="65dp"
             android:layout_marginLeft="100dp"
-
-            />
-        <ImageButton
-            android:layout_width="45dp"
-            android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
+            android:layout_marginTop="250dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w01n" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="230dp"
+            app:layout_constraintTop_toTopOf="@id/imageButton9"
+            android:layout_marginLeft="100dp"
+            android:text="名古屋"/>
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="45dp"
+            android:layout_height="65dp"
             android:layout_marginLeft="250dp"
-            />
-        <ImageButton
-            android:layout_width="45dp"
-            android:layout_height="65dp"
-            app:srcCompat="@drawable/cor1"
+            android:layout_marginTop="230dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w03n"
+            tools:srcCompat="@drawable/w03n" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="150dp"
+            app:layout_constraintTop_toTopOf="@id/imageButton10"
+            android:layout_marginLeft="250dp"
+            android:text="東京"/>
+
+        <ImageButton
+            android:id="@+id/imageButton11"
+            android:layout_width="45dp"
+            android:layout_height="65dp"
             android:layout_marginLeft="290dp"
-            />
+            android:layout_marginTop="150dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w02d" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageButton11"
+            android:layout_marginLeft="290dp"
+            android:text="仙台"/>
 
 
         <ImageButton
+            android:id="@+id/imageButton12"
             android:layout_width="50dp"
             android:layout_height="75dp"
-            app:srcCompat="@drawable/cor1"
-            app:layout_constraintTop_toBottomOf="@id/button2"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="60dp"
             android:layout_marginLeft="105dp"
-            />
+            android:layout_marginTop="60dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:srcCompat="@drawable/w10d" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageButton0"
+            android:layout_marginLeft="115dp"
+            android:text="那覇"/>
 
 
         <TextView
@@ -615,6 +746,7 @@
             app:layout_constraintTop_toBottomOf="@+id/weatherText_item"
             app:srcCompat="@drawable/cor2" />
 
+
         <TextView
             android:id="@+id/weatherText"
             android:layout_width="wrap_content"
@@ -634,6 +766,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Space android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/weatherText_item"
+            android:layout_marginTop="730dp"
+            />
+
+
 
         <!--        フッター-->
 <!--
