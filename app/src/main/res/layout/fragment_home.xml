@@ -363,17 +363,6 @@
 
         </HorizontalScrollView>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/shape_style3"
-            android:text="↓"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
         <ImageView
             android:id="@+id/imageView1"
@@ -383,7 +372,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
             app:srcCompat="@drawable/map_japan" />
 
         <ImageView
@@ -397,7 +386,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
             app:srcCompat="@drawable/okinawa_map_japan" />
 
 
@@ -412,7 +401,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w01n" />
 
         <TextView
@@ -434,7 +423,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w02d" />
 
         <TextView
@@ -455,7 +444,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w03d" />
 
         <TextView
@@ -477,7 +466,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w10d" />
         <TextView
             android:layout_width="wrap_content"
@@ -497,7 +486,7 @@
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w11d" />
         <TextView
             android:layout_width="wrap_content"
@@ -516,7 +505,7 @@
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w02d" />
         <TextView
             android:layout_width="wrap_content"
@@ -535,7 +524,7 @@
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w01d" />
         <TextView
             android:layout_width="wrap_content"
@@ -555,7 +544,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w11n" />
         <TextView
             android:layout_width="wrap_content"
@@ -576,7 +565,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w01n" />
         <TextView
             android:layout_width="wrap_content"
@@ -597,7 +586,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w03n"
             tools:srcCompat="@drawable/w03n" />
         <TextView
@@ -619,7 +608,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w02d" />
         <TextView
             android:layout_width="wrap_content"
@@ -640,7 +629,7 @@
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
             app:srcCompat="@drawable/w10d" />
 
         <TextView
