@@ -1,5 +1,6 @@
 package nhs90556.hal.ac.u_22
 
+import android.util.Log
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -37,7 +38,7 @@ class Weather constructor(_city: String, _apiKey: String){
 
     val city:String
     val apiKey:String
-    val clothingIndexStr:String = "80"
+    val clothingIndexStr: Array<String?> = arrayOfNulls(8)
     val weatherDatas = Array(8, {arrayOfNulls<String>(6)})
 
     init {
@@ -103,10 +104,24 @@ class Weather constructor(_city: String, _apiKey: String){
             weatherDatas[i][4] = precipitation
             weatherDatas[i][5] = feelTemp
 
+            // ここに服装指数の計算式を入れる
+            when {
+                weatherDatas[i][1].toString().substring(0, 2).toInt() > 26 -> {
+                    clothingIndexStr[i] = "90"
+                }
+                weatherDatas[i][1].toString().substring(0, 2).toInt() > 21 -> {
+                    clothingIndexStr[i] = "70"
+                }
+                weatherDatas[i][1].toString().substring(0, 2).toInt() > 16 -> {
+                    clothingIndexStr[i] = "50"
+                }
+                weatherDatas[i][1].toString().substring(0, 2).toInt() > 11 -> {
+                    clothingIndexStr[i] = "30"
+                }
+                else -> clothingIndexStr[i] = "10"
+            }
+//            Log.d("服装指数検証用", clothingIndexStr[i].toString())
         }
-
-        // ここに服装指数の計算式を入れる
-        //clothingIndexStr =
     }
 
     // 天候情報を返す関数
@@ -116,7 +131,8 @@ class Weather constructor(_city: String, _apiKey: String){
     }
 
     // 服装指数を返す関数
-    fun getClothingIndex(): String {
+    fun getClothingIndex(): Array<String?> {
+        Thread.sleep(300)
         return clothingIndexStr
     }
 

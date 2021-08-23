@@ -1,80 +1,125 @@
 package nhs90556.hal.ac.u_22
 
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TableLayout
-import android.widget.TableRow
+import android.view.ViewGroup
+import android.view.WindowInsets
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_favorite_sunny.*
+import io.realm.Realm
+import io.realm.kotlin.where
+import nhs90556.hal.ac.u_22.models.CoordinateModel
+import nhs90556.hal.ac.u_22.models.FavoriteModel
+
 
 class SunnyActivity : AppCompatActivity() {
+
+    private lateinit var realm: Realm
+
+    lateinit var user: FavoriteModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favorite_sunny)
 
+        val mParent = ViewGroup.LayoutParams.MATCH_PARENT
+        val wContent = ViewGroup.LayoutParams.WRAP_CONTENT
+
+        val scrollView = ScrollView(this)
+
+        scrollView.layoutParams = LinearLayout.LayoutParams(wContent, mParent)
+
+        val windowMetrics = this.windowManager.currentWindowMetrics
+        val ScreenWidthHalf = windowMetrics.bounds.width() / 2
+        val reseizeWidthHald = ScreenWidthHalf * 0.885
+
+        realm = Realm.getDefaultInstance()
+
+        val users = realm.where<FavoriteModel>().findAll()
+
+        val category = this.intent.getStringExtra("Category")?.toInt()
+
+        val imageLink_el = users.size
+
+        // TableLayoutの生成
+        val iL_element = imageLink_el / 2
+        val iL_element_p = ( imageLink_el % 2 ) - 1
+        val tableLayout = TableLayout(this).also {
+
+            var j = 0
+
+            for (i in 1..iL_element) {
+
+                val tableRow = TableRow(this).also {
+
+                    for (k in 0..1) {
+
+                        val coor = realm.where<CoordinateModel>()
+                            .equalTo("coordinate_id", users[k + j]?.favorite_coordinate_id)
+                            .findFirst()
+
+                        if (coor != null) {
+                            if (coor.coordinate_weather == category) {
+
+                                val button1 = ImageButton(this)
+
+                                Picasso.get()
+                                    .load(coor.coordinate_url)
+                                    .resize(reseizeWidthHald.toInt(), reseizeWidthHald.toInt())
+                                    .centerCrop()
+                                    .into(button1)
+
+                                it.addView(button1)
+                            }
+                        }
+
+                    }
+
+                    j = j + 2
+
+                }
+
+                it.addView(tableRow)
+
+            }
+
+            val tableRow = TableRow(this).also {
+
+                for (k in 0..iL_element_p) {
 
 
+                    val coor = realm.where<CoordinateModel>()
+                        .equalTo("coordinate_id", users[k + j]?.favorite_coordinate_id)
+                        .findFirst()
 
-        val imageView: ImageView = findViewById(R.id.imageView)
+                    if (coor != null) {
+                        if (coor.coordinate_weather == category) {
 
-        Picasso.get()
-            //AMAZONのやつの画像取得
-            .load("https://akissutest.s3.us-east-2.amazonaws.com/tshirt_item.jpeg")
-//            .resize(300, 300) //表示サイズ指定
-//            .centerCrop() //resizeで指定した範囲になるよう中央から切り出し
-            .into(imageView) //imageViewに流し込み
+                            val button1 = ImageButton(this)
 
+                            Picasso.get()
+                                .load(coor.coordinate_url)
+                                .resize(reseizeWidthHald.toInt(), reseizeWidthHald.toInt())
+                                .centerCrop()
+                                .into(button1)
 
+                            it.addView(button1)
+                        }
 
+                    }
 
+                }
 
+            }
 
+            it.addView(tableRow)
 
-
-
-
-//        val imageLink = arrayOf("imagelink1", "imagelink2", "imagelink3")
-//        val strTitle = arrayOf("title1", "title2", "title3")
-//
-//        // TableLayoutの生成
-//        val tableLayout = TableLayout(this).also {
-//
-//            var j = 0 ;
-//
-//            imageLink.forEach {
-//                val i = j
-//                var s = "tableRow ${i}";
-//
-//                val constraintLayout = findViewById<ConstraintLayout>(R.id.favoriteAnoter)
-//
-//                 s = TableRow(this).let {
-//                     var imageBt = ImageButton(this)
-//
-//                     constraintLayout.addView(imageBt)
-//                 }.toString()
-//
-//                j = j + 1;
-//
-//            }
-//
-//        }
-//
-//        // TableLayoutをレイアウトに設定
-//        setContentView(tableLayout)
-
-        //値を受け取り表示
-//        val category = this.intent.getStringExtra("Category")
-//        textView2.text = category
-
-        //カテゴリに戻る
-        BackButton.setOnClickListener {
-            finish()
         }
+
+        scrollView.addView(tableLayout)
+
+        setContentView(scrollView)
+
     }
 
 }

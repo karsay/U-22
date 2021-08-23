@@ -32,22 +32,22 @@ class FavoriteFragment : Fragment() {
         //一覧の画面に飛ぶ
         imageButton0.setOnClickListener {
             val intent = Intent(context, SunnyActivity::class.java)
-            intent.putExtra("Category", 0.toString())
+            intent.putExtra("Category", 1.toString())
             startActivity(intent)
         }
         imageButton1.setOnClickListener {
             val intent = Intent(context, SunnyActivity::class.java)
-            intent.putExtra("Category", 1.toString())
+            intent.putExtra("Category", 2.toString())
             startActivity(intent)
         }
         imageButton2.setOnClickListener {
             val intent = Intent(context, SunnyActivity::class.java)
-            intent.putExtra("Category", 2.toString())
+            intent.putExtra("Category", 3.toString())
             startActivity(intent)
         }
         imageButton3.setOnClickListener {
             val intent = Intent(context, SunnyActivity::class.java)
-            intent.putExtra("Category", 3.toString())
+            intent.putExtra("Category", 4.toString())
             startActivity(intent)
         }
 
