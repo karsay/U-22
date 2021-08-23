@@ -94,6 +94,7 @@
                 android:src="@drawable/codbutton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:tag="0"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
@@ -173,15 +174,16 @@
                 android:src="@drawable/codbutton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                android:tag="0"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
-                android:id="@+id/lastimageView"
+                android:id="@+id/lastImageView"
                 android:layout_width="0dp"
                 android:layout_height="250dp"
                 android:layout_marginTop="30dp"
                 android:scaleType="centerCrop"
-                app:layout_constraintBottom_toTopOf="@+id/lastimageButton"
+                app:layout_constraintBottom_toTopOf="@+id/lastImageButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -190,7 +192,7 @@
                 app:srcCompat="@drawable/cor1" />
 
             <TextView
-                android:id="@+id/lasttextView1"
+                android:id="@+id/lastTextView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
@@ -198,7 +200,7 @@
                 android:layout_marginTop="14dp"
                 android:text="体感温度"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lastimageView" />
+                app:layout_constraintTop_toBottomOf="@+id/lastImageView" />
 
             <TextView
                 android:id="@+id/feelTemp3"
@@ -209,10 +211,10 @@
                 android:layout_marginTop="14dp"
                 android:text="快い"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lastimageView" />
+                app:layout_constraintTop_toBottomOf="@+id/lastImageView" />
 
             <TextView
-                android:id="@+id/lastimageView3"
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="116dp"
@@ -220,7 +222,7 @@
                 android:layout_marginTop="14dp"
                 android:text="服装指数"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lastimageView" />
+                app:layout_constraintTop_toBottomOf="@+id/lastImageView" />
 
             <TextView
                 android:id="@+id/clothingIndex3"
@@ -231,10 +233,10 @@
                 android:layout_marginTop="14dp"
                 android:text="※"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lastimageView" />
+                app:layout_constraintTop_toBottomOf="@+id/lastImageView" />
 
             <TextView
-                android:id="@+id/lastcomment"
+                android:id="@+id/lastComment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -245,15 +247,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.485"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lastimageView" />
+                app:layout_constraintTop_toBottomOf="@+id/lastImageView" />
 
             <ImageButton
-                android:id="@+id/lastimageButton"
+                android:id="@+id/lastImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/codbutton"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lastimageView"
+                app:layout_constraintTop_toBottomOf="@+id/lastImageView"
+                android:tag="0"
                 tools:ignore="MissingConstraints" />
 
 
