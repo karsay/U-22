@@ -2,6 +2,7 @@ package nhs90556.hal.ac.u_22.ui.home
 
 import android.os.Bundle
 import android.os.Handler
+import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -57,19 +58,25 @@ class HomeFragment : Fragment() {
             }
         }
 
-        //天候取得
-        val weather = Weather("nagoya-shi","6e8e86e4e208ed9480deb401bd28ba65")
+        // 登録都道府県の取得
+        // メモリから登録データの取得
+        val pref = PreferenceManager.getDefaultSharedPreferences(context)
+        val predectureId = pref.getInt("PREFECTURE_ID", 22)
+        //xmlファイルからアイテムの配列を取得
+        val items = resources.getStringArray(R.array.txt_area_arr)
+        homeAreaText.setText(String.format("本日の%sの天気", items[predectureId]))
+
+        // 天候取得
+        val weather = Weather("Aichi-ken","6e8e86e4e208ed9480deb401bd28ba65")
         val sb = StringBuilder()
         for(i in 0..7){
             sb.append(weather.getWeather()[i])
         }
 
-
         val tableDay: List<TextView> = listOf(tableDay1, tableDay2, tableDay3, tableDay4, tableDay5, tableDay6, tableDay7)
         val tableTemp: List<TextView> = listOf(tableTemp1, tableTemp2, tableTemp3, tableTemp4, tableTemp5, tableTemp6, tableTemp7)
         val tableWeather: List<ImageView> = listOf(tableWeather1, tableWeather2, tableWeather3, tableWeather4, tableWeather5, tableWeather6, tableWeather7)
         val tableHum: List<TextView> = listOf(tableHum1, tableHum2, tableHum3, tableHum4, tableHum5, tableHum6, tableHum7)
-//        val tableDay: List<TextView> = listOf(tableDay1, tableDay2, tableDay3, tableDay4, tableDay5, tableDay6, tableDay7)
 
         val weatherData = weather.getWeather()
         for (i in 0..6) {

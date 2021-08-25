@@ -10,6 +10,7 @@
 
     <string name="male">男性</string>
     <string name="female">女性</string>
+    <string name="button">登録</string>
     <string name="gender_selected">性別を選んでください</string>
     <string name="area" />
     <string name="area_selected">地域を選択してください</string>
