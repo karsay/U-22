@@ -48,4 +48,52 @@
         <item>鹿児島県</item>
         <item>沖縄県</item>
     </string-array>
+    <string-array name="txt_area_code_arr">
+        <item>Hokkaido</item>
+        <item>Aomori-ken</item>
+        <item>Iwate</item>
+        <item>Miyagi-ken</item>
+        <item>Akita</item>
+        <item>Yamagata-ken</item>
+        <item>Fukushima-ken</item>
+        <item>Ibaraki</item>
+        <item>Tochigi</item>
+        <item>Gunma-ken</item>
+        <item>Saitama-ken</item>
+        <item>Chiba-ken</item>
+        <item>Tokyo</item>
+        <item>Kanagawa</item>
+        <item>Niigata-ken</item>
+        <item>Toyama-ken</item>
+        <item>Ishikawa-ken</item>
+        <item>Fukui</item>
+        <item>Yamanashi</item>
+        <item>Nagano-ken</item>
+        <item>Gifu</item>
+        <item>Shizuoka</item>
+        <item>Aichi-ken</item>
+        <item>Mie-ken</item>
+        <item>Kusatsu</item>
+        <item>Kyoto</item>
+        <item>Osaka</item>
+        <item>Kobe</item>
+        <item>Nara-ken</item>
+        <item>Wakayama</item>
+        <item>Tottori</item>
+        <item>Okayama-ken</item>
+        <item>Hiroshima-ken</item>
+        <item>Yamaguchi</item>
+        <item>Tokushima-ken</item>
+        <item>Kagawa-ken</item>
+        <item>Ehime</item>
+        <item>Kochi</item>
+        <item>Fukuoka</item>
+        <item>Saga-ken</item>
+        <item>Nagasaki</item>
+        <item>Kumamoto</item>
+        <item>Oita Prefecture</item>
+        <item>Miyazaki</item>
+        <item>Kagoshima-ken</item>
+        <item>Okinawa</item>
+    </string-array>
 </resources>

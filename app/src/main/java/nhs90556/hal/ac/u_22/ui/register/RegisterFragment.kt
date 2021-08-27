@@ -28,11 +28,18 @@ class RegisterFragment : Fragment() {
 
         // メモリから登録データの取得
         val pref = PreferenceManager.getDefaultSharedPreferences(context)
-        val genderId = pref.getInt("GENDER_ID", R.id.radioMale)
+        val genderId = pref.getInt("GENDER_ID", 1)
         val predectureId = pref.getInt("PREFECTURE_ID", 22)
+        var tmpGenderId = 0
+
+        if(genderId == 1) {
+            tmpGenderId = R.id.radioMale
+        } else {
+            tmpGenderId = R.id.radioFemale
+        }
 
         //ラジオボタンの初期値を設定
-        val radioButton = view.findViewById<RadioButton>(genderId)
+        val radioButton = view.findViewById<RadioButton>(tmpGenderId)
         radioButton.isChecked = true
 
         //xmlファイルからアイテムの配列を取得
@@ -58,7 +65,12 @@ class RegisterFragment : Fragment() {
     private fun saveData() {
         val pref = PreferenceManager.getDefaultSharedPreferences(context)
         val editor = pref.edit()
-        editor.putInt("GENDER_ID", radioGender.checkedRadioButtonId)
+//        editor.putInt("GENDER_ID", radioGender.checkedRadioButtonId)
+        if(radioGender.checkedRadioButtonId == R.id.radioMale){
+            editor.putInt("GENDER_ID", 1)
+        } else {
+            editor.putInt("GENDER_ID", 2)
+        }
         editor.putInt("PREFECTURE_ID", spinner.selectedItemPosition)
             .apply()
     }
