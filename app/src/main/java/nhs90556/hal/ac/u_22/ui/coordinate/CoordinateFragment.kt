@@ -2,6 +2,8 @@ package nhs90556.hal.ac.u_22.ui.coordinate
 
 
 import android.os.Bundle
+import android.preference.PreferenceManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,10 +45,15 @@ class CoordinateFragment : Fragment() {
 
         // クラスの初期化
         val weather = Weather("nagoya-shi", "92a88046b4ab7f78a4feb2675631128d")
+        weather.setLocalWeather()
         // 天気情報の取得
         val weatherData = weather.getWeather()
         // 服装指数の取得
         val clothingIndex = weather.getClothingIndex()
+        // 性別の取得
+        val pref = PreferenceManager.getDefaultSharedPreferences(context)
+        val genderId = pref.getInt("GENDER_ID", 1)
+//        Log.d("GENDER_ID", genderId.toString())
 
         val feelTempText: List<TextView> = listOf(feelTemp1, feelTemp2, feelTemp3)
         val clothingIndexText: List<TextView> = listOf(clothingIndex1, clothingIndex2, clothingIndex3)
@@ -56,7 +63,8 @@ class CoordinateFragment : Fragment() {
 
         // 服装指数からレコード取得
         var coor = realm.where<CoordinateModel>()
-            .equalTo("coordinate_index", clothingIndex[1].toString().toInt())    // 何故かtoInt()がないとエラーになる
+            .equalTo("coordinate_index", clothingIndex[0].toString().toInt())    // 何故かtoInt()がないとエラーになる
+            .equalTo("coordinate_gender", genderId.toInt())
             .findAll()
 
         // コンテンツの書き換え
@@ -81,7 +89,7 @@ class CoordinateFragment : Fragment() {
             feelTempText[i].setText(String.format("%s℃", weatherData[i][5]?.substring(0, 2)))
 
             // 服装指数の表示
-            clothingIndexText[i].setText(clothingIndex[1].toString())
+            clothingIndexText[i].setText(clothingIndex[0].toString())
 
             // 一言コメントの表示
             commentList[i].setText(coor[i]?.coordinate_detail)

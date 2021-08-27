@@ -14,4 +14,5 @@
     <string name="gender_selected">性別を選んでください</string>
     <string name="area" />
     <string name="area_selected">地域を選択してください</string>
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>

@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+        
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
@@ -35,14 +35,21 @@
             android:id="@+id/weathertitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            >
+            app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_style"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="日付"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_style"
                 android:gravity="center"
@@ -51,25 +58,37 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_style"
+                android:gravity="center"
                 android:padding="5dp"
                 android:text="温度"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="35sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@drawable/shape_style"
+                android:gravity="center"
                 android:padding="5dp"
                 android:text="天気"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_style"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="降水率"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_style"
+                android:gravity="center"
                 android:padding="5dp"
                 android:text="湿度"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -80,10 +99,10 @@
             android:id="@+id/horizontalScrollView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="45dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView">
+            android:layout_marginStart="64dp"
+            android:layout_marginLeft="64dp"
+            app:layout_constraintStart_toEndOf="@+id/weathertitle"
+            app:layout_constraintTop_toBottomOf="@+id/homeAreaText">
 
             <TableLayout
                 android:id="@+id/table_cuerpo"
@@ -95,11 +114,83 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/homeAreaText">
 
+                <TableRow
+                    android:id="@+id/tableRow6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_style1">
+
+                    <TextView
+                        android:id="@+id/tableDate1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDate2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDate3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDate4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDate5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDate6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tableDate7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </TableRow>
+
 
                 <TableRow
                     android:id="@+id/tableRow1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_style1">
 
 
                     <TextView
@@ -107,7 +198,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="5dp"
+                        android:padding="5dp"
                         android:text="TextView"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -165,14 +256,12 @@
                         android:text="TextView"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-
                 </TableRow>
 
                 <TableRow
                     android:id="@+id/tableRow2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/shape_style1">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tableTemp1"
@@ -242,7 +331,8 @@
                 <TableRow
                     android:id="@+id/tableRow3"
                     android:layout_width="match_parent"
-                    android:layout_height="30sp">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_style1">
 
                     <ImageView
                         android:id="@+id/tableWeather1"
@@ -284,7 +374,79 @@
                         android:id="@+id/tableWeather7"
                         android:layout_width="50sp"
                         android:layout_height="35sp"
-                        android:padding="5dp" />
+                        android:scaleType="centerCrop" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/tablePop1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tablePop2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tablePop3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tablePop4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tablePop5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tablePop6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tablePop7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
 
                 </TableRow>
 
@@ -368,11 +530,12 @@
             android:id="@+id/imageView1"
             android:layout_width="0dp"
             android:layout_height="400dp"
+            android:layout_marginTop="8dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
             app:srcCompat="@drawable/map_japan" />
 
         <ImageView
@@ -380,84 +543,89 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="75dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/okinawa_map_japan" />
-
 
 
         <ImageButton
             android:id="@+id/imageButton1"
             android:layout_width="45dp"
             android:layout_height="65dp"
-            android:layout_marginLeft="220dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="40dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w01n" />
 
         <TextView
+            android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton1"
-            android:layout_marginRight="80dp"
-            android:text="札幌"/>
+            android:text="札幌"
+            app:layout_constraintBottom_toTopOf="@+id/imageButton1"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton1"
+            app:layout_constraintStart_toStartOf="@+id/imageButton1"
+            app:layout_constraintTop_toTopOf="@id/imageButton1" />
 
 
         <ImageButton
-            android:id="@id/imageButton2"
+            android:id="@+id/niigataButton"
             android:layout_width="45dp"
             android:layout_height="65dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="110dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w02d" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton2"
-            android:layout_marginRight="135dp"
-            android:text="新潟"/>
+            android:text="新潟"
+            app:layout_constraintBottom_toTopOf="@+id/niigataButton"
+            app:layout_constraintEnd_toEndOf="@+id/niigataButton"
+            app:layout_constraintStart_toStartOf="@+id/niigataButton"
+            app:layout_constraintTop_toTopOf="@+id/niigataButton" />
 
         <ImageButton
-            android:id="@id/imageButton3"
+            android:id="@+id/kanazawaButton"
             android:layout_width="45dp"
             android:layout_height="65dp"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="165dp"
             android:layout_marginRight="10dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w03d" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton3"
-            android:layout_marginRight="10dp"
-            android:text="金沢"/>
+            android:text="金沢"
+            app:layout_constraintBottom_toTopOf="@+id/kanazawaButton"
+            app:layout_constraintEnd_toEndOf="@+id/kanazawaButton"
+            app:layout_constraintStart_toStartOf="@+id/kanazawaButton"
+            app:layout_constraintTop_toTopOf="@+id/kanazawaButton" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/hirosimaButton"
             android:layout_width="45dp"
             android:layout_height="65dp"
             android:layout_marginTop="190dp"
@@ -466,38 +634,41 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w10d" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton4"
-            android:layout_marginRight="140dp"
-            android:text="広島"/>
+            android:text="広島"
+            app:layout_constraintBottom_toTopOf="@+id/hirosimaButton"
+            app:layout_constraintEnd_toEndOf="@+id/hirosimaButton"
+            app:layout_constraintStart_toStartOf="@+id/hirosimaButton"
+            app:layout_constraintTop_toTopOf="@id/hirosimaButton" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/fukuokaButton"
             android:layout_width="45dp"
             android:layout_height="65dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="210dp"
+            android:layout_marginTop="200dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w11d" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton5"
-            android:layout_marginLeft="50dp"
-            android:text="福岡"/>
+            android:text="福岡"
+            app:layout_constraintBottom_toTopOf="@+id/fukuokaButton"
+            app:layout_constraintEnd_toEndOf="@+id/fukuokaButton"
+            app:layout_constraintStart_toStartOf="@+id/fukuokaButton"
+            app:layout_constraintTop_toTopOf="@id/fukuokaButton" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/kagoshimaButton"
             android:layout_width="45dp"
             android:layout_height="65dp"
             android:layout_marginLeft="45dp"
@@ -505,140 +676,153 @@
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w02d" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton6"
-            android:layout_marginLeft="45dp"
-            android:text="鹿児島"/>
+            android:text="鹿児島"
+            app:layout_constraintBottom_toTopOf="@+id/kagoshimaButton"
+            app:layout_constraintEnd_toEndOf="@+id/kagoshimaButton"
+            app:layout_constraintStart_toStartOf="@+id/kagoshimaButton"
+            app:layout_constraintTop_toTopOf="@id/kagoshimaButton" />
 
         <ImageButton
-            android:id="@+id/imageButton7"
+            android:id="@+id/kochiButton"
             android:layout_width="45dp"
             android:layout_height="65dp"
-            android:layout_marginLeft="105dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
             android:layout_marginTop="280dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w01d" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton7"
-            android:layout_marginLeft="115dp"
-            android:text="高知"/>
+            android:text="高知"
+            app:layout_constraintBottom_toTopOf="@+id/kochiButton"
+            app:layout_constraintEnd_toEndOf="@+id/kochiButton"
+            app:layout_constraintStart_toStartOf="@+id/kochiButton"
+            app:layout_constraintTop_toTopOf="@id/kochiButton" />
 
         <ImageButton
-            android:id="@+id/imageButton8"
+            android:id="@+id/osakaButtin"
             android:layout_width="45dp"
             android:layout_height="65dp"
-            android:layout_marginTop="270dp"
+            android:layout_marginTop="260dp"
             android:layout_marginRight="25dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w11n" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton8"
             android:layout_marginRight="25dp"
-            android:text="大阪"/>
+            android:text="大阪"
+            app:layout_constraintBottom_toTopOf="@+id/osakaButtin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/osakaButtin" />
 
         <ImageButton
-            android:id="@+id/imageButton9"
+            android:id="@+id/nagoyaButton"
             android:layout_width="45dp"
             android:layout_height="65dp"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="240dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w01n" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton9"
-            android:layout_marginLeft="100dp"
-            android:text="名古屋"/>
+            android:text="名古屋"
+            app:layout_constraintBottom_toTopOf="@+id/nagoyaButton"
+            app:layout_constraintEnd_toEndOf="@+id/nagoyaButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/nagoyaButton"
+            app:layout_constraintTop_toTopOf="@id/nagoyaButton" />
 
         <ImageButton
-            android:id="@+id/imageButton10"
-            android:layout_width="45dp"
-            android:layout_height="65dp"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="230dp"
+            android:id="@+id/tokyoButton"
+            android:layout_width="47dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="200dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w03n"
             tools:srcCompat="@drawable/w03n" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton10"
-            android:layout_marginLeft="250dp"
-            android:text="東京"/>
+            android:text="東京"
+            app:layout_constraintBottom_toTopOf="@+id/tokyoButton"
+            app:layout_constraintEnd_toEndOf="@+id/tokyoButton"
+            app:layout_constraintStart_toStartOf="@+id/tokyoButton"
+            app:layout_constraintTop_toTopOf="@id/tokyoButton" />
 
         <ImageButton
-            android:id="@+id/imageButton11"
+            android:id="@+id/sendaiButton"
             android:layout_width="45dp"
             android:layout_height="65dp"
-            android:layout_marginLeft="290dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="120dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
             app:srcCompat="@drawable/w02d" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton11"
-            android:layout_marginLeft="290dp"
-            android:text="仙台"/>
+            android:text="仙台"
+            app:layout_constraintBottom_toTopOf="@+id/sendaiButton"
+            app:layout_constraintEnd_toEndOf="@+id/sendaiButton"
+            app:layout_constraintStart_toStartOf="@+id/sendaiButton"
+            app:layout_constraintTop_toTopOf="@id/sendaiButton" />
 
 
         <ImageButton
-            android:id="@+id/imageButton12"
+            android:id="@+id/nahaButton"
             android:layout_width="50dp"
             android:layout_height="75dp"
-            android:layout_marginLeft="105dp"
-            android:layout_marginTop="60dp"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton0"
+            app:layout_constraintStart_toStartOf="@+id/imageButton0"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:srcCompat="@drawable/w10d" />
 
         <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imageButton0"
-            android:layout_marginLeft="115dp"
-            android:text="那覇"/>
+            android:text="那覇"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton0"
+            app:layout_constraintStart_toStartOf="@+id/imageButton0"
+            app:layout_constraintTop_toTopOf="@id/imageButton0" />
 
 
         <TextView
@@ -654,99 +838,101 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView1" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/itemImage1"
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/cor2"
             app:layout_constraintTop_toBottomOf="@+id/weatherText_item"
-            />
+            app:srcCompat="@drawable/cor2" />
 
         <TextView
-            android:id="@+id/weatherText"
+            android:id="@+id/itemName1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="a"
+            android:textSize="25sp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/itemImage1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/itemImage1"
+            app:layout_constraintTop_toTopOf="@+id/itemImage1" />
+
+        <ImageView
+            android:id="@+id/itemImage2"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="50dp"
-            android:padding="5dp"
-            android:text="a"
-            android:textSize="25sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weatherText_item"
-            />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="210dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weatherText_item"
+            app:layout_constraintTop_toBottomOf="@+id/itemImage1"
             app:srcCompat="@drawable/cor2" />
 
         <TextView
-            android:id="@+id/weatherText"
+            android:id="@+id/itemName2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="210dp"
-            android:layout_marginRight="50dp"
+            android:gravity="center"
             android:padding="5dp"
             android:text="a"
             android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/itemImage2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weatherText_item" />
+            app:layout_constraintStart_toEndOf="@+id/itemImage2"
+            app:layout_constraintTop_toTopOf="@+id/itemImage2" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/itemImage3"
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="390dp"
-            android:scaleType="centerCrop"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weatherText_item"
+            app:layout_constraintTop_toBottomOf="@+id/itemImage2"
             app:srcCompat="@drawable/cor2" />
 
         <TextView
-            android:id="@+id/weatherText"
+            android:id="@+id/itemName3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="390dp"
-            android:layout_marginRight="50dp"
+            android:gravity="center"
             android:padding="5dp"
             android:text="a"
             android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/itemImage3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weatherText_item" />
+            app:layout_constraintStart_toEndOf="@+id/itemImage3"
+            app:layout_constraintTop_toTopOf="@+id/itemImage3" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/itemImage4"
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="570dp"
-            android:scaleType="centerCrop"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weatherText_item"
+            app:layout_constraintTop_toBottomOf="@+id/itemImage3"
             app:srcCompat="@drawable/cor2" />
 
 
         <TextView
-            android:id="@+id/weatherText"
+            android:id="@+id/itemName4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="570dp"
-            android:layout_marginRight="50dp"
+            android:gravity="center"
             android:padding="5dp"
             android:text="a"
             android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/itemImage4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weatherText_item" />
+            app:layout_constraintStart_toEndOf="@+id/itemImage4"
+            app:layout_constraintTop_toTopOf="@+id/itemImage4" />
 
          <androidx.viewpager.widget.ViewPager
             android:id="@+id/pager"
@@ -756,12 +942,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Space android:layout_width="match_parent"
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            app:layout_constraintTop_toBottomOf="@+id/weatherText_item"
             android:layout_marginTop="730dp"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/weatherText_item" />
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="全国の天気"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
 
         <!--        フッター-->

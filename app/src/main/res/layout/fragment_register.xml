@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.register.RegisterFragment">
+
     <TextView
         android:id="@+id/textRegister"
         android:layout_width="0dp"
@@ -15,14 +16,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <RadioGroup
         android:id="@+id/radioGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textRegister"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
+
         <RadioButton
             android:id="@+id/radioMale"
             android:layout_width="wrap_content"
@@ -34,6 +37,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/radioGender"
             app:layout_constraintVertical_bias="0.64" />
+
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="100dp"
@@ -44,7 +48,8 @@
             app:layout_constraintHorizontal_bias="0.518"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.136" ></ImageView>
+            app:layout_constraintVertical_bias="0.136"></ImageView>
+
         <RadioButton
             android:id="@+id/radioFemale"
             android:layout_width="wrap_content"
@@ -56,6 +61,7 @@
             app:layout_constraintStart_toEndOf="@+id/radioGender"
             app:layout_constraintTop_toTopOf="@+id/radioGender"
             app:layout_constraintVertical_bias="0.64" />
+
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="100dp"
@@ -81,10 +87,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.752" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/gender_selected"
         app:layout_constraintBottom_toTopOf="@+id/radioGender"
         app:layout_constraintEnd_toEndOf="parent"
