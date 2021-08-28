@@ -55,9 +55,9 @@ class SetWeatherPicksData : Application() {
         Realm.deleteRealm(config)
         Realm.setDefaultConfiguration(config)
 
-// realmインスタンス作成
+        // realmインスタンス作成
         realm = Realm.getDefaultInstance()
-// 男性: 服装指数90
+        // 男性: 服装指数90
         val coordinateUrlMan90: List<String> = listOf(
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/hansode/mens/00001.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/hansode/mens/00002.png",
@@ -70,7 +70,7 @@ class SetWeatherPicksData : Application() {
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/hansode/mens/00009.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/hansode/mens/00010.png"
         )
-// 一言コメント
+        // 一言コメント
         val coordinateDetailMan90: List<String> = listOf(
             "1",
             "2",
@@ -83,7 +83,7 @@ class SetWeatherPicksData : Application() {
             "9",
             "10"
         )
-// 検証用レコード追加
+        // 検証用レコード追加
         repeat(coordinateUrlMan90.size) {
             realm.executeTransaction { db: Realm ->
                 val maxId = db.where<CoordinateModel>().max("coordinate_id")
@@ -96,7 +96,7 @@ class SetWeatherPicksData : Application() {
                 coordinate.coordinate_gender = 1
             }
         }
-// 男性: 服装指数70
+        // 男性: 服装指数70
         val coordinateUrlMan70: List<String> = listOf(
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/nagasode/mens/00001.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/nagasode/mens/00002.png",
@@ -109,7 +109,7 @@ class SetWeatherPicksData : Application() {
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/nagasode/mens/00009.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/nagasode/mens/00010.png"
         )
-// 一言コメント
+        // 一言コメント
         val coordinateDetailMan70: List<String> = listOf(
             "1",
             "2",
@@ -122,7 +122,7 @@ class SetWeatherPicksData : Application() {
             "9",
             "10"
         )
-// 検証用レコード追加
+        // 検証用レコード追加
         repeat(coordinateUrlMan70.size) {
             realm.executeTransaction { db: Realm ->
                 val maxId = db.where<CoordinateModel>().max("coordinate_id")
@@ -135,7 +135,7 @@ class SetWeatherPicksData : Application() {
                 coordinate.coordinate_gender = 1
             }
         }
-// 男性: 服装指数50
+        // 男性: 服装指数50
         val coordinateUrlMan50: List<String> = listOf(
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/ichimaihaori/mens/00001.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/ichimaihaori/mens/00002.png",
@@ -148,7 +148,7 @@ class SetWeatherPicksData : Application() {
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/ichimaihaori/mens/00009.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/ichimaihaori/mens/00010.png"
         )
-// 一言コメント
+        // 一言コメント
         val coordinateDetailMan50: List<String> = listOf(
             "1",
             "2",
@@ -161,7 +161,7 @@ class SetWeatherPicksData : Application() {
             "9",
             "10"
         )
-// 検証用レコード追加
+        // 検証用レコード追加
         repeat(coordinateUrlMan50.size) {
             realm.executeTransaction { db: Realm ->
                 val maxId = db.where<CoordinateModel>().max("coordinate_id")
@@ -174,7 +174,7 @@ class SetWeatherPicksData : Application() {
                 coordinate.coordinate_gender = 1
             }
         }
-// 男性: 服装指数30
+        // 男性: 服装指数30
         val coordinateUrlMan30: List<String> = listOf(
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/boukangu/mens/00001.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/boukangu/mens/00002.png",
@@ -187,7 +187,7 @@ class SetWeatherPicksData : Application() {
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/boukangu/mens/00009.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/boukangu/mens/00010.png"
         )
-// 一言コメント
+        // 一言コメント
         val coordinateDetailMan30: List<String> = listOf(
             "1",
             "2",
@@ -200,7 +200,7 @@ class SetWeatherPicksData : Application() {
             "9",
             "10"
         )
-// 検証用レコード追加
+        // 検証用レコード追加
         repeat(coordinateUrlMan30.size) {
             realm.executeTransaction { db: Realm ->
                 val maxId = db.where<CoordinateModel>().max("coordinate_id")
@@ -213,7 +213,7 @@ class SetWeatherPicksData : Application() {
                 coordinate.coordinate_gender = 1
             }
         }
-// 女性: 服装指数90
+        // 女性: 服装指数90
         val coordinateUrlWoman90: List<String> = listOf(
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/hansode/ladies/00001.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/hansode/ladies/00002.png",
@@ -227,7 +227,7 @@ class SetWeatherPicksData : Application() {
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/hansode/ladies/00010.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/hansode/ladies/00011.png"
         )
-// 一言コメント
+        // 一言コメント
         val coordinateDetailWoman90: List<String> = listOf(
             "1",
             "2",
@@ -241,7 +241,7 @@ class SetWeatherPicksData : Application() {
             "10",
             "11"
         )
-// 検証用レコード追加
+        // 検証用レコード追加
         repeat(coordinateUrlWoman90.size) {
             realm.executeTransaction { db: Realm ->
                 val maxId = db.where<CoordinateModel>().max("coordinate_id")
@@ -254,7 +254,7 @@ class SetWeatherPicksData : Application() {
                 coordinate.coordinate_gender = 2
             }
         }
-// 女性: 服装指数70
+        // 女性: 服装指数70
         val coordinateUrlWoman70: List<String> = listOf(
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/nagasode/ladies/00001.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/nagasode/ladies/00002.png",
@@ -270,7 +270,7 @@ class SetWeatherPicksData : Application() {
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/nagasode/ladies/00012.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/nagasode/ladies/00013.png"
         )
-// 一言コメント
+        // 一言コメント
         val coordinateDetailWoman70: List<String> = listOf(
             "1",
             "2",
@@ -286,7 +286,7 @@ class SetWeatherPicksData : Application() {
             "12",
             "13"
         )
-// 検証用レコード追加
+        // 検証用レコード追加
         repeat(coordinateUrlWoman70.size) {
             realm.executeTransaction { db: Realm ->
                 val maxId = db.where<CoordinateModel>().max("coordinate_id")
@@ -299,7 +299,7 @@ class SetWeatherPicksData : Application() {
                 coordinate.coordinate_gender = 2
             }
         }
-// 女性: 服装指数50
+        // 女性: 服装指数50
         val coordinateUrlWoman50: List<String> = listOf(
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/ichimaihaori/ladies/00001.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/ichimaihaori/ladies/00002.png",
@@ -312,7 +312,7 @@ class SetWeatherPicksData : Application() {
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/ichimaihaori/ladies/00009.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/ichimaihaori/ladies/00010.png"
         )
-// 一言コメント
+        // 一言コメント
         val coordinateDetailWoman50: List<String> = listOf(
             "1",
             "2",
@@ -325,7 +325,7 @@ class SetWeatherPicksData : Application() {
             "9",
             "10"
         )
-// 検証用レコード追加
+        // 検証用レコード追加
         repeat(coordinateUrlWoman50.size) {
             realm.executeTransaction { db: Realm ->
                 val maxId = db.where<CoordinateModel>().max("coordinate_id")
@@ -338,7 +338,7 @@ class SetWeatherPicksData : Application() {
                 coordinate.coordinate_gender = 2
             }
         }
-// 女性: 服装指数30
+        // 女性: 服装指数30
         val coordinateUrlWoman30: List<String> = listOf(
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/boukangu/ladies/00001.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/boukangu/ladies/00002.png",
@@ -351,7 +351,7 @@ class SetWeatherPicksData : Application() {
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/boukangu/ladies/00009.png",
             "https://akissutest.s3.us-east-2.amazonaws.com/fashion/boukangu/ladies/000010.png"
         )
-// 一言コメント
+        // 一言コメント
         val coordinateDetailWoman30: List<String> = listOf(
             "1",
             "2",
@@ -364,7 +364,7 @@ class SetWeatherPicksData : Application() {
             "9",
             "10"
         )
-// 検証用レコード追加
+        // 検証用レコード追加
         repeat(coordinateUrlWoman30.size) {
             realm.executeTransaction { db: Realm ->
                 val maxId = db.where<CoordinateModel>().max("coordinate_id")
@@ -426,7 +426,7 @@ class SetWeatherPicksData : Application() {
             "電熱ベスト"
         )
 
-        // おすすめアイテムの名前を格納
+        // おすすめアイテムのカテゴリを格納
         val recommendCategory: List<Int> = listOf(1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4,
             4, 4, 5, 5, 5, 5
         )

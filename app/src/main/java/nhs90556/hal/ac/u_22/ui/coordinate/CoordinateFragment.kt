@@ -55,11 +55,11 @@ class CoordinateFragment : Fragment() {
         val genderId = pref.getInt("GENDER_ID", 1)
 //        Log.d("GENDER_ID", genderId.toString())
 
-        val feelTempText: List<TextView> = listOf(feelTemp1, feelTemp2, feelTemp3)
-        val clothingIndexText: List<TextView> = listOf(clothingIndex1, clothingIndex2, clothingIndex3)
-        val imgBtnList: List<ImageButton> = listOf(imageButton1, imageButton2, lastImageButton)
-        val imgViewList: List<ImageView> = listOf(imageView, imageView2, lastImageView)
-        val commentList: List<TextView> = listOf(comment1, comment2, lastComment)
+        val feelTempText: List<TextView> = listOf(feelTemp1, feelTemp2, feelTemp3, feelTemp4, feelTemp5, feelTemp6, feelTemp7, feelTemp8, feelTemp9, lastFeelTemp)
+        val clothingIndexText: List<TextView> = listOf(clothingIndex1, clothingIndex2, clothingIndex3, clothingIndex4, clothingIndex5, clothingIndex6, clothingIndex7, clothingIndex8, clothingIndex9, lastClothingIndex)
+        val imgBtnList: List<ImageButton> = listOf(imageButton1, imageButton2, imageButton3, imageButton4, imageButton5, imageButton6, imageButton7, imageButton8, imageButton9, lastImageButton)
+        val imgViewList: List<ImageView> = listOf(imageView1, imageView2, imageView3, imageView4, imageView5, imageView6, imageView7, imageView8, imageView9, lastImageView)
+        val commentList: List<TextView> = listOf(comment1, comment2, comment3, comment4, comment5, comment6, comment7, comment8, comment9, lastComment)
 
         // 服装指数からレコード取得
         var coor = realm.where<CoordinateModel>()
@@ -68,39 +68,39 @@ class CoordinateFragment : Fragment() {
             .findAll()
 
         // コンテンツの書き換え
-        for (i in 0..2) {
+        repeat(imgViewList.size) {
             // coordinate_idをtagに格納
-            imgBtnList[i].setTag(coor[i]?.coordinate_id)
+            imgBtnList[it].setTag(coor[it]?.coordinate_id)
 //          Log.d("タグ確認", imgBtnList[i].getTag().toString())
 
             // お気に入りボタンの判定
             var fvrt = realm.where<FavoriteModel>()
-                .equalTo("favorite_coordinate_id", imgBtnList[i].getTag().toString().toInt())
+                .equalTo("favorite_coordinate_id", imgBtnList[it].getTag().toString().toInt())
                 .findFirst()
 
             if (fvrt == null) {
                 // 未登録の場合、白いブックマーク画像をセット
-                imgBtnList[i].setImageResource(R.drawable.codbutton)
+                imgBtnList[it].setImageResource(R.drawable.codbutton)
             } else {
                 // 登録済の場合、赤いブックマーク画像をセット
-                imgBtnList[i].setImageResource(R.drawable.codbutton2)
+                imgBtnList[it].setImageResource(R.drawable.codbutton2)
             }
             // 体感温度の表示
-            feelTempText[i].setText(String.format("%s℃", weatherData[i][5]?.substring(0, 2)))
+            feelTempText[it].setText(String.format("%s℃", weatherData[0][5]?.substring(0, 2)))
 
             // 服装指数の表示
-            clothingIndexText[i].setText(clothingIndex[0].toString())
+            clothingIndexText[it].setText(clothingIndex[0].toString())
 
             // 一言コメントの表示
-            commentList[i].setText(coor[i]?.coordinate_detail)
+            commentList[it].setText(coor[it]?.coordinate_detail)
 
             // コーディネート画像切り替え
             Picasso.get()
-                .load(coor[i]?.coordinate_url)
-                .into(imgViewList[i])
+                .load(coor[it]?.coordinate_url)
+                .into(imgViewList[it])
 
             // お気に入りボタンの画像切り替え、削除処理. 未登録:白, 登録済:赤
-            imgBtnList[i].setOnClickListener(FavoriteEvent())
+            imgBtnList[it].setOnClickListener(FavoriteEvent())
         }
     }
 
