@@ -9,65 +9,66 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraitLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <!-- TODO: Update blank fragment layout -->
+        <!-- TODO: Update blank fragment layout -->
 
 
-    <ImageButton
-        android:id="@+id/imageButton0"
-        android:layout_width="0dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/image_button_bg"
-        app:srcCompat="@drawable/fav_sunny" />
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/imageButton0"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="115dp"-->
+        <!--        android:layout_marginTop="10dp"-->
+        <!--        android:layout_marginBottom="5dp"-->
+        <!--        android:scaleType="fitCenter"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent"-->
+        <!--        android:background="@drawable/image_button_bg"-->
+        <!--        app:srcCompat="@drawable/fav_sunny" />-->
 
-    <ImageButton
-        android:id="@+id/imageButton1"
-        android:layout_width="0dp"
-        android:layout_height="115dp"
-        android:scaleType="fitCenter"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton0"
-        android:background="@drawable/image_button_bg"
-        app:srcCompat="@drawable/fav_rain" />
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/imageButton1"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="115dp"-->
+        <!--        android:scaleType="fitCenter"-->
+        <!--        android:layout_marginTop="5dp"-->
+        <!--        android:layout_marginBottom="5dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/imageButton0"-->
+        <!--        android:background="@drawable/image_button_bg"-->
+        <!--        app:srcCompat="@drawable/fav_rain" />-->
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="0dp"
-        android:layout_height="115dp"
-        android:scaleType="fitCenter"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton1"
-        android:background="@drawable/image_button_bg"
-        app:srcCompat="@drawable/fav_cloud" />
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/imageButton2"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="115dp"-->
+        <!--        android:scaleType="fitCenter"-->
+        <!--        android:layout_marginTop="5dp"-->
+        <!--        android:layout_marginBottom="5dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/imageButton1"-->
+        <!--        android:background="@drawable/image_button_bg"-->
+        <!--        app:srcCompat="@drawable/fav_cloud" />-->
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="0dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:adjustViewBounds="false"
-        android:scaleType="fitCenter"
-        android:scrollbarAlwaysDrawHorizontalTrack="false"
-        android:scrollbarAlwaysDrawVerticalTrack="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        android:background="@drawable/image_button_bg"
-        app:srcCompat="@drawable/fav_snowy" />
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/imageButton3"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="115dp"-->
+        <!--        android:layout_marginTop="5dp"-->
+        <!--        android:layout_marginBottom="5dp"-->
+        <!--        android:adjustViewBounds="false"-->
+        <!--        android:scaleType="fitCenter"-->
+        <!--        android:scrollbarAlwaysDrawHorizontalTrack="false"-->
+        <!--        android:scrollbarAlwaysDrawVerticalTrack="true"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/imageButton2"-->
+        <!--        android:background="@drawable/image_button_bg"-->
+        <!--        app:srcCompat="@drawable/fav_snowy" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
