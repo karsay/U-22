@@ -43,17 +43,20 @@ class CoordinateFragment : Fragment() {
         // realmインスタンス作成
         realm = Realm.getDefaultInstance()
 
+        // 登録情報のの取得
+        val pref = PreferenceManager.getDefaultSharedPreferences(context)
+        val genderId = pref.getInt("GENDER_ID", 1)
+        val predectureId = pref.getInt("PREFECTURE_ID", 22)
+        // xmlファイルから都道府県の配列を取得
+        val items = resources.getStringArray(R.array.txt_area_arr)
+
         // クラスの初期化
-        val weather = Weather("nagoya-shi", "92a88046b4ab7f78a4feb2675631128d")
+        val weather = Weather(items[predectureId], "92a88046b4ab7f78a4feb2675631128d")
         weather.setLocalWeather()
         // 天気情報の取得
         val weatherData = weather.getWeather()
         // 服装指数の取得
         val clothingIndex = weather.getClothingIndex()
-        // 性別の取得
-        val pref = PreferenceManager.getDefaultSharedPreferences(context)
-        val genderId = pref.getInt("GENDER_ID", 1)
-//        Log.d("GENDER_ID", genderId.toString())
 
         val feelTempText: List<TextView> = listOf(feelTemp1, feelTemp2, feelTemp3, feelTemp4, feelTemp5, feelTemp6, feelTemp7, feelTemp8, feelTemp9, lastFeelTemp)
         val clothingIndexText: List<TextView> = listOf(clothingIndex1, clothingIndex2, clothingIndex3, clothingIndex4, clothingIndex5, clothingIndex6, clothingIndex7, clothingIndex8, clothingIndex9, lastClothingIndex)

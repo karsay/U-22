@@ -49,7 +49,6 @@ class Weather constructor(_city: String, _apiKey: String){
     init {
         city = _city
         apiKey = _apiKey
-//        initWeather()
     }
 
     // unixtimeからフォーマットの時間に変換
@@ -177,6 +176,7 @@ class Weather constructor(_city: String, _apiKey: String){
         return clothingIndexStr
     }
 
+    // 全国の天気を返す関数
     fun getGlobalWeatherIcons():Array<String>{
         Thread.sleep(5000)
         return globalWetherIcons

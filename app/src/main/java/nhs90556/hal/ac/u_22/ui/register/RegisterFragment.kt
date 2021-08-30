@@ -29,8 +29,8 @@ class RegisterFragment : Fragment() {
         // メモリから登録データの取得
         val pref = PreferenceManager.getDefaultSharedPreferences(context)
         val genderId = pref.getInt("GENDER_ID", 1)
-        val predectureId = pref.getInt("PREFECTURE_ID", 22)
-        var tmpGenderId = 0
+        val prefectureId = pref.getInt("PREFECTURE_ID", 22)
+        var tmpGenderId:Int
 
         if(genderId == 1) {
             tmpGenderId = R.id.radioMale
@@ -52,7 +52,7 @@ class RegisterFragment : Fragment() {
         spinner.adapter = adapter
 
         // スピナーの初期値を設定
-        spinner.setSelection(predectureId)
+        spinner.setSelection(prefectureId)
 
         //　登録処理
         button.setOnClickListener {
@@ -65,7 +65,6 @@ class RegisterFragment : Fragment() {
     private fun saveData() {
         val pref = PreferenceManager.getDefaultSharedPreferences(context)
         val editor = pref.edit()
-//        editor.putInt("GENDER_ID", radioGender.checkedRadioButtonId)
         if(radioGender.checkedRadioButtonId == R.id.radioMale){
             editor.putInt("GENDER_ID", 1)
         } else {

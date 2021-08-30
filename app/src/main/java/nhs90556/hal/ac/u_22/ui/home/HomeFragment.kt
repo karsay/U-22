@@ -28,21 +28,21 @@ class HomeFragment : Fragment() {
 
     // スライドショー
     class MyAdapter(fm: FragmentManager, clothingIndex:Array<String?>, genderId:Int) : FragmentPagerAdapter(fm) {
-//        val pref = PreferenceManager.getDefaultSharedPreferences(this)
-//        val genderId = pref.getInt("GENDER_ID", 1)
+
         // realmインスタンス作成
         val realm = Realm.getDefaultInstance()
         val coor = realm.where<CoordinateModel>()
             .equalTo("coordinate_index", clothingIndex[0].toString().toInt())
-            .equalTo("coordinate_gender", genderId.toInt())
+            .equalTo("coordinate_gender", genderId)
             .findAll()
+
+        // スライドする画像を格納する
         private val resources = listOf(
             coor[0]!!.coordinate_url,
             coor[1]!!.coordinate_url,
-            coor[2]!!.coordinate_url
-//            "https://akissutest.s3.us-east-2.amazonaws.com/d05cb1aa079df16cc63bd1a58fd92a34.jpeg",
-//            "https://akissutest.s3.us-east-2.amazonaws.com/Gucci_2020SS_001.jpeg",
-//            "https://akissutest.s3.us-east-2.amazonaws.com/3.webp"
+            coor[2]!!.coordinate_url,
+            coor[3]!!.coordinate_url,
+            coor[4]!!.coordinate_url
         )
 
         override fun getCount(): Int {
@@ -118,7 +118,7 @@ class HomeFragment : Fragment() {
             }
         }
 
-        // 全国の天気取得
+        // 内部メモリから全国の天気取得
         nahaButton.setImageResource(resources.getIdentifier(String.format("w%s", pref.getString("OKINAWA", "01d")),"drawable", getActivity()?.getPackageName()))
         imageButton1.setImageResource(resources.getIdentifier(String.format("w%s", pref.getString("SAPPORO", "01d")),"drawable", getActivity()?.getPackageName()))
         niigataButton.setImageResource(resources.getIdentifier(String.format("w%s", pref.getString("NIIGATA", "01d")),"drawable", getActivity()?.getPackageName()))
@@ -144,6 +144,7 @@ class HomeFragment : Fragment() {
             else -> "0"
         }
 
+        // カテゴリーにあったアイテムの取得
         val recItem = realm.where<RecommendItemModel>()
             .equalTo("item_category",itemCategory.toInt())
             .findAll()
