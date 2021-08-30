@@ -155,10 +155,9 @@ class Weather constructor(_city: String, _apiKey: String){
                 weatherDatas[i][1].toString().substring(0, 2).toInt() > 16 -> {
                     clothingIndexStr[i] = "50"
                 }
-                weatherDatas[i][1].toString().substring(0, 2).toInt() > 11 -> {
+                else -> {
                     clothingIndexStr[i] = "30"
                 }
-                else -> clothingIndexStr[i] = "10"
             }
 //            Log.d("服装指数検証用", clothingIndexStr[i].toString())
         }
