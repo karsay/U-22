@@ -24,9 +24,21 @@ class SetWeatherPicksData : Application() {
         val globalWetherIcons = weather.getGlobalWeatherIcons()
         // フラグメント生成時に毎回api１２回投げてるとすぐ利用制限かかるかつ時間もかかるため全国天気は内部メモリに保存
         val pref = PreferenceManager.getDefaultSharedPreferences(this)
-        // アプリ起動時に一旦クリア
+//        // アプリ起動時に一旦クリア
         pref.edit{
-            clear()
+            remove("OKINAWA")
+            remove("SAPPORO")
+            remove("NIIGATA")
+            remove("KANAZAWA")
+            remove("HIROSHIMA")
+            remove("FUKUOKA")
+            remove("KAGOSHIMA")
+            remove("KOCHI")
+            remove("OSAKA")
+            remove("NAGOYA")
+            remove("TOKYO")
+            remove("SENDAI")
+                .apply()
         }
         // データの代入
         val editor = pref.edit()
