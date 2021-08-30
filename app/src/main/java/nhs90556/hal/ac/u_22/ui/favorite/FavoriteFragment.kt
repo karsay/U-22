@@ -1,7 +1,6 @@
 package nhs90556.hal.ac.u_22.ui.favorite
 
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +15,6 @@ import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_favorite.*
 import nhs90556.hal.ac.u_22.R
-import nhs90556.hal.ac.u_22.SunnyActivity
 import nhs90556.hal.ac.u_22.models.CoordinateModel
 import nhs90556.hal.ac.u_22.models.FavoriteModel
 
